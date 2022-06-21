@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Vector
 {
-    internal class Matrix
+    internal class Matrix : IEnumerable
     {
         private int rows;
         private int Rows
@@ -37,6 +38,20 @@ namespace Vector
             this.Rows = Width;
             this.columns = Height;
             matrix = new int[Height, Width];
+        }
+        
+        public Matrix(int[,] matrix)
+        {
+            rows = matrix.GetLength(0);
+            columns = matrix.GetLength(1);
+            this.matrix = new int[rows, columns];
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    this.matrix[i, j] = matrix[i, j];
+                }
+            }
         }
 
         public enum Direction { Right, Down }
@@ -101,6 +116,72 @@ namespace Vector
                 }
             }
 
+        }
+
+        public void SpiralSnake()
+        {
+            //const int rows = 3;
+            //const int columns = 4;
+            //int[,] matrix = new int[n, m];
+
+            int row = 0;
+            int col = 0;
+            int dx = 1;
+            int dy = 0;
+            int dirChanges = 0;
+            int visits = columns;
+
+            for (int i = 0; i < matrix.Length; i++)
+            {
+                matrix[row, col] = i + 1;
+                if (--visits == 0)
+                {
+                    visits = columns * (dirChanges % 2) + rows * ((dirChanges + 1) % 2) - (dirChanges / 2 - 1) - 2;
+                    int temp = dx;
+                    dx = -dy;
+                    dy = temp;
+                    dirChanges++;
+                }
+
+                col += dx;
+                row += dy;
+            }
+        }
+        
+
+        public IEnumerator GetEnumerator()
+        {
+
+            int row = 0;
+            int col = 0;
+            int dx = 1;
+            int dy = 0;
+            int dirChanges = 0;
+            int visits = columns;
+
+            for (int i = 0; i < matrix.Length; i++)
+            {
+                yield return matrix[row, col] = i + 1;
+                if (--visits == 0)
+                {
+                    visits = columns * (dirChanges % 2) + rows * ((dirChanges + 1) % 2) - (dirChanges / 2 - 1) - 2;
+                    int temp = dx;
+                    dx = -dy;
+                    dy = temp;
+                    dirChanges++;
+                }
+
+                col += dx;
+                row += dy;
+            }
+
+            //for (int column = 0; column < columns; column++)
+            //{
+            //    for (int row = 0; row < rows; row++)
+            //    {
+            //        yield return matrix[row, column];
+            //    }
+            //}
         }
     }
 

@@ -43,9 +43,10 @@ namespace Task_6
                             WriteToFile(FindLongestAndShortestWords(newLine.Trim()));
                         }
                         newLine = text[text.Count - 1];
-                        continue;
+                        //continue;
                     }
-                    newLine += line;
+                    else
+                        newLine += line;
                 }
             }
         }

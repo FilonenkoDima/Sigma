@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace matrix
 {
-    public static class Matrix
+    public  class Matrix : IEnumerator
     {
 
         public static void VerticalSnake()
@@ -111,5 +111,10 @@ namespace matrix
         }
 
 
+    }
+
+    public IEnumerator GetEnumerator()
+    {
+        return matrix.GetEnumerator();
     }
 }

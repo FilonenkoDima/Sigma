@@ -35,19 +35,27 @@ namespace Vector
             //    Console.WriteLine(ex.Message);
             //}
 
-            Vector a = new Vector(20);
-            a.RandomInitialization();
-            Vector b = new Vector(10);
-            b.RandomInitialization();
-            Console.WriteLine("a:\n" + a.ToString());
-            Console.WriteLine("b:\n" + b.ToString());
-            Console.WriteLine("a + b:\n" + (a + b).ToString());
+            //Vector a = new Vector(20);
+            //a.RandomInitialization();
+            //Vector b = new Vector(10);
+            //b.RandomInitialization();
+            //Console.WriteLine("a:\n" + a.ToString());
+            //Console.WriteLine("b:\n" + b.ToString());
+            //Console.WriteLine("a + b:\n" + (a + b).ToString());
 
-            a += 5;
-            Console.WriteLine("a += 5\n" + a.ToString());
+            //a += 5;
+            //Console.WriteLine("a += 5\n" + a.ToString());
 
-            int k = a;
-            Console.WriteLine("explicit\n" + (int)a);
+            //int k = a;
+            //Console.WriteLine("explicit\n" + (int)a);
+
+            int[,] test = { { 1, 2, 3}, { 4, 5, 6 }, { 7, 8, 9} };
+            Matrix example1 = new Matrix(test);
+            //example1.SpiralSnake();
+            foreach(var item in example1)
+                Console.WriteLine(item);
+                
+
         }
     }
 }

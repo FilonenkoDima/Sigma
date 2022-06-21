@@ -7,8 +7,8 @@ namespace task6_1
 {
     class AppartmensService
     {
-        List<Appartment> appartments;
-        int quarter;
+        private List<Appartment> appartments;
+        private int quarter;
         public int Quarter { get => quarter; }
         string errors;
         public string Errors { get { return errors; } }
