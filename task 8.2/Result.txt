@@ -1,0 +1,4 @@
+139.18.152.126 - 4; Thursday - 2; in 21 hours - 2
+139.18.150.126 - 3; Friday - 1; in 21 hours - 2
+139.18.151.126 - 4; Saturday - 2; in 23 hours - 4
+23 - 7
