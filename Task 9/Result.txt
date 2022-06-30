@@ -1,0 +1,20 @@
+Total: USD 3,98
+
+Total costs for each dish: 
+World's Best Lasagna : USD 0,40
+Easy Meatloaf : USD 0,83
+Slow Cooker Texas Pulled Pork : USD 0,53
+Italian Baked Meatballs : USD 0,58
+5-Ingredient Mexican Casserole : USD 1,64
+
+
+Total costs for each product: 
+Restaurant needs 100 gram of Asparagus for USD 0,06
+Restaurant needs 200 gram of Apples for USD 0,06
+Restaurant needs 1050 gram of Bananas for USD 0,98
+Restaurant needs 400 gram of Beans for USD 1,40
+Restaurant needs 635 gram of Broccoli for USD 0,63
+Restaurant needs 100 gram of Beef for USD 0,04
+Restaurant needs 120 gram of Beets for USD 0,31
+Restaurant needs 500 gram of Kiwi for USD 0,50
+
